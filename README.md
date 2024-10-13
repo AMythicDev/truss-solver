@@ -9,6 +9,7 @@ Please read the INPUTS section in main.py to see a detailed explanation on how t
 It will respond with the load in each truss and reaction forces where any pin joint/roller joint exists.
 
 **USAGE**:
+
 It is expected that the host running this has Python and Pip installed.
 - Clone the repositiory
 ```sh
@@ -35,6 +36,7 @@ directly in the main.py source file.
 unknowns.
 
 **NOTE ABOUT CODE**:
+
 This is a college assignment and I only gave a doy or two to write this. Hence it contains a hell of
 unoptimized algorithms and hacky code everywhere to \*just\* get the job done. It is also largely
 undocumented.
@@ -49,4 +51,5 @@ such as cross-sectional area, Young's modulus etc or improves the physics relate
 or helps in finding other physical parameters such as shear or stress.
 
 **LICENSE**:
+
 The code available under the MIT License and all contributions shall be under the same license unless explicitly mentioned.
