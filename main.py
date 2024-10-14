@@ -9,23 +9,23 @@ import itertools
 # entered ("A", "B") then do not enter ("B", "A") again. This is completely 
 # untested and can give unexpected results.
 
-# trusses: tuple[tuple[str, str], ...] = (
-#     ("A", "B"),
-#     ("A", "E"),
-#     ("E", "B"),
-#     ("E", "D"),
-#     ("B", "D"),
-#     ("B", "C"),
-#     ("C", "D"),
-# )
-
 trusses: tuple[tuple[str, str], ...] = (
     ("A", "B"),
-    ("A", "C"),
-    ("A", "D"),
+    ("A", "E"),
+    ("E", "B"),
+    ("E", "D"),
     ("B", "D"),
+    ("B", "C"),
     ("C", "D"),
 )
+
+# trusses: tuple[tuple[str, str], ...] = (
+#     ("A", "B"),
+#     ("A", "C"),
+#     ("A", "D"),
+#     ("B", "D"),
+#     ("C", "D"),
+# )
 
 
 # Joints: Describes each joint
@@ -33,28 +33,28 @@ trusses: tuple[tuple[str, str], ...] = (
 #
 # 0: x-coordinate of the joint (float)
 # 1: y-coordinate of the joint (float)
-# 2: is there reaction force in the x direction (bool)
-# 3: is there reaction force in the y direction (bool)
+# 2: is there reaction force in the x direction (0 or 1)
+# 3: is there reaction force in the y direction (0 or 1)
 # 4: Point load in x-direction (float)
 # 5: Point load in y-direction (float)
 #
 # For pin joints both 2 and 3 will be True and for roller joints either of 2 or
 # 3 will be True
 
-# joints = {
-#     "A": (0, 1, 1, 1, 0, 0),
-#     "B": (np.sqrt(3), 0, 0, 0, 0, 0),
-#     "C": (2 * np.sqrt(3), 0, 0, 0, 0, -3),
-#     "D": (np.sqrt(3), -1, 0, 0, 0, 0),
-#     "E": (0, 0, 1, 0, 0, 0),
-# }
-
 joints = {
-    "D": (0, 0, 1, 0, 0, 0),
-    "A": (0, 3, 1, 1, 0, 0),
-    "B": (4, 3, 0, 0, 0, -1),
-    "C": (4, 0, 0, 0, 0, 0),
+    "A": (0, 1, 1, 1, 0, 0),
+    "B": (np.sqrt(3), 0, 0, 0, 0, 0),
+    "C": (2 * np.sqrt(3), 0, 0, 0, 0, -3),
+    "D": (np.sqrt(3), -1, 0, 0, 0, 0),
+    "E": (0, 0, 1, 0, 0, 0),
 }
+
+# joints = {
+#     "D": (0, 0, 1, 0, 0, 0),
+#     "A": (0, 3, 1, 1, 0, 0),
+#     "B": (4, 3, 0, 0, 0, -1),
+#     "C": (4, 0, 0, 0, 0, 0),
+# }
 
 # ============================= END OF INPUTS =================================
 
